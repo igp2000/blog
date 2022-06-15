@@ -1,0 +1,75 @@
+@import "../css/vars.scss";
+
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+  padding: 0 22px;
+
+  &-title {
+    white-space: nowrap;
+    @include font($font-family-main, $font-style, 400, 18px, 28px, "");
+    color: rgba($color: $black, $alpha: 0.85);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+.button__signup,
+.button__signin {
+  padding: 0 18.17px;
+  height: 51px;
+  //@include font($font-family-main, $font-style, 400, 18px, 28px, "");
+  @include font($font-family-main, $font-style, 400, 18px, 50px, "");
+}
+
+.button__signin {
+  margin-right: 19px;
+  color: $black;
+  &:hover {
+    background-color: rgba($color: $black, $alpha: 0.05);
+  }
+}
+
+.button__create-article {
+  padding: 0 10.23px;
+  height: 31.1px;
+  margin-right: 27px;
+  //@include font($font-family-main, $font-style, 400, 14px, 22px, "");
+  @include font($font-family-main, $font-style, 400, 14px, 30px, "");
+}
+
+.button__log-out {
+  width: 109px;
+  height: 51px;
+  margin-left: 27px;
+  text-align: center;
+  //@include font($font-family-main, $font-style, 400, 18px, 28px, "");
+  @include font($font-family-main, $font-style, 400, 18px, 50px, "");
+}
+
+.user-data {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &-name {
+    margin-right: 13px;
+    @include font($font-family-main, $font-style, 400, 18px, 28px, "");
+    color: rgba($color: $black, $alpha: 0.85);
+  }
+
+  IMG {
+    width: 46px;
+    height: 46px;
+  }
+}
