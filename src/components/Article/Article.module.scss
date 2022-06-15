@@ -1,0 +1,152 @@
+@import "../css/vars.scss";
+
+.article {
+  width: 941px;
+  height: auto;
+  background: $white;
+  border-radius: 5px;
+  padding: 15px 19px;
+  margin: 13px 0;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+
+  &-announcement {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      margin-right: 8px;
+      @include font($font-family-main, $font-style, 400, 20px, 28px, "");
+      color: $blue;
+      text-decoration: none;
+    }
+
+    &__favorits {
+      width: 16px;
+      height: 16px;
+      outline: none;
+      border: none;
+      margin: 0 5px;
+      background: url(../css/img/favorits.png) no-repeat top left;
+      display: inline-block;
+
+      &_cursor_pointer {
+        cursor: pointer;
+      }
+
+      &_favorited {
+        background: url(../css/img/favorits-on.png) no-repeat top left;
+      }
+    }
+
+    &__count-favorits {
+      @include font($font-family-main, $font-style, 400, 12px, 22px, "");
+      color: rgba($color: $black, $alpha: 0.75);
+    }
+  }
+
+  &-tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px 0;
+
+    &__tag {
+      padding: 2px 5px;
+      margin-right: 8px;
+      color: rgba($color: $black, $alpha: 0.5);
+      border: 1px solid rgba($color: $black, $alpha: 0.5);
+      border-radius: 2px;
+      @include font($font-family-main, $font-style, 400, 12px, 15px, "");
+    }
+  }
+
+  &__text-short {
+    height: 50px;
+    overflow: hidden;
+    margin-top: 10px;
+
+    color: rgba($color: $black, $alpha: 0.75);
+    @include font($font-family-main, $font-style, 400, 12px, 22px, "");
+  }
+
+  &-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    IMG {
+      width: 46px;
+      height: 46px;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      height: 46px;
+      padding-right: 12px;
+
+      &__author {
+        white-space: nowrap;
+        @include font($font-family-main, $font-style, 400, 18px, 28px, "");
+        color: rgba($color: $black, $alpha: 0.85);
+      }
+
+      &__date {
+        white-space: nowrap;
+        margin-top: -8px;
+        @include font($font-family-main, $font-style, 400, 12px, 22px, "");
+        color: rgba($color: $black, $alpha: 0.5);
+      }
+    }
+  }
+
+  &-full-text {
+    padding-top: 25px;
+    @include font($font-family-main, $font-style, 400, 14px, 22px, 0em);
+
+    H1 {
+      @include font($font-family-main, $font-style, 400, 20px, 28px, 0em);
+      margin: 0;
+    }
+
+    H2, H3, H4, H5, H6 {
+      @include font($font-family-main, $font-style, 400, 18px, 28px, 0em);
+      margin: 0;
+    }
+  }
+
+  &-data-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+    padding-top: 30px;
+  }
+}
+
+.button__delete,
+.button__edit {
+  padding: 0 17px;
+  height: 31.1px;
+  display: inline-block;
+  @include font("Inter", $font-style, 400, 14px, 30px, "");
+}
+.button__delete {
+  margin-right: 12px;
+}
