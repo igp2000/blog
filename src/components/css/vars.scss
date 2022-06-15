@@ -1,0 +1,27 @@
+$body-background-color: #EBEEF3;
+$font-family-main: "Inter";
+$font-style: normal;
+
+$white: #ffffff;
+$green: #52c41a;
+$black: #000000;
+$red: #F5222D;
+$blue: #1890FF;
+$gray: #595959;
+
+$placeholde-color: #bfbfbf;
+$label-color: #262626;
+$field-border-color: #d9d9d9;
+
+@mixin font($ff: $font-family-main, $fst: $font-style, $fw: 400, $fsz: 12px, $lh: "", $ls: "") {
+  font-family: $ff;
+  font-style: $fst;
+  font-weight: $fw;
+  font-size: $fsz;
+  @if $lh != "" {
+    line-height: $lh;
+  }
+  @if $ls != "" {
+    letter-spacing: $ls;
+  }
+}
