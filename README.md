@@ -1,4 +1,4 @@
 # blog
 
-https://blog-gamma-pink-39.vercel.app
+https://blog-chi-amber-38.vercel.app
 
