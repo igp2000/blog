@@ -1,4 +1,4 @@
 # blog
 
-https://blog-chi-amber-38.vercel.app
+https://blog-seven-indol-59.vercel.app
 
